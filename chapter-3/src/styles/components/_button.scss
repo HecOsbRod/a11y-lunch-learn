@@ -1,0 +1,132 @@
+$button-color: $pink;
+
+.button {
+  background: $button-color;
+  color: $grey-dark;
+  display: inline-block;
+  border-radius: 5px;
+  min-width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  border: 0;
+  text-transform: uppercase;
+
+  &--hover,
+  &:hover {
+    background: darken($button-color, 15%);
+  }
+
+  &--active,
+  &:active {
+    background: darken($button-color, 25%);
+    outline: 0px !important;
+  }
+
+  &--focus,
+  &:focus {
+    outline: 3px dashed $white;
+    box-shadow: inset 0 0 0 2px $primary;
+  }
+
+  &--disabled,
+  :disabled {
+    background: rgba($grey, 0.1);
+    color: rgba($grey, 0.5);
+    border: 1px solid rgba($grey, 0.5);
+  }
+
+  &--outline {
+    color: $button-color;
+    border: 1px solid $button-color;
+    background: none;
+
+    &--hover,
+    &:hover {
+      background: rgba($button-color, 0.1);
+    }
+
+    &--disabled,
+    :disabled {
+      background: rgba($grey, 0.1);
+      color: rgba($grey, 0.5);
+      border: 1px solid rgba($grey, 0.5);
+    }
+
+    &--active,
+    &:active {
+      background: rgba($button-color, 0.2);
+    }
+  }
+  &--icon {
+    position: relative;
+    padding: 0 1.5rem 0 2.5rem;
+
+    &__icon {
+      position: absolute;
+      top: 15px;
+      left: 16px;
+    }
+  }
+
+  &--small {
+    min-width: 48px;
+    max-width: 48px;
+    height: 48px;
+    background: $grey-light;
+    color: $black;
+    border: 1px solid rgba($grey, 0.2);
+    position: relative;
+    padding: 0;
+
+    &--hover,
+    &:hover {
+      background: rgba($grey, 0.3);
+    }
+
+    &--active,
+    &:active {
+      background: rgba($grey, 0.5);
+    }
+
+    &--focus,
+    &:focus {
+      outline: 3px dashed $black;
+      box-shadow: inset 0 0 0 2px $white, inset 0 0 0 4px $red;
+      border: 0;
+    }
+  }
+}
+
+.light {
+  .button {
+    &--focus,
+    &:focus {
+      outline: 3px dashed $black;
+      box-shadow: inset 0 0 0 2px $white;
+    }
+
+    &--outline {
+      &--focus,
+      &:focus {
+        outline: 3px dashed $black;
+        box-shadow: inset 0 0 0 2px $white, inset 0 0 0 3px $button-color;
+        border: 0;
+      }
+    }
+
+    &--small {
+      &--focus,
+      &:focus {
+        outline: 3px dashed $black;
+        box-shadow: inset 0 0 0 2px $white, inset 0 0 0 3px rgba($grey, 0.3);
+        border: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+body {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-size: 18px;
+  color: $white;
+  background: $primary;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  li {
+    margin: 1rem 0;
+  }
+}
+
+a,
+button,
+input {
+  &:focus {
+    outline: 3px dashed $black;
+  }
+}
+
+hr {
+  margin: 2rem 0;
+  border-top: 1px solid $grey-30;
+}
+
+.hide {
+  display: none;
+}
+
+.caption,
+caption {
+  width: 100%;
+  margin: 0.5rem auto;
+  text-align: center;
+  font-style: italic;
+}
